@@ -1,6 +1,7 @@
 body {
+  padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
@@ -9,39 +10,55 @@ header {
   height: 80px;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10px 0 100px;
+  padding: 30px 100px 0 100px;
   max-width: 1300px;
   margin: auto;
   background-color: #0171f9;
   color: #fff;
 }
 
+.headerContainer {
+  background-color: #0171f9;
+}
+
 .logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
   width: 150px;
   border-radius: 50px;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 0 10px;
   background-color: #0171f9;
   color: #fff;
 }
 .navbar ul {
   display: flex;
   margin: 0;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 10px;
+  padding: 0;
   background-color: #0171f9;
   color: #fff;
+  list-style: none;
+}
+
+.navbar .headerLinks  {
+   display: flex;
+   align-items: center;
+   gap: 25px;
 }
 
 .navbar ul li {
   list-style: none;
-  padding: 10px;
+  padding: 0;
 }
 
 .navbar ul li a {
@@ -67,9 +84,13 @@ header {
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  &:hover {
-    background-color: #9e4147;
-  }
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.buttons:hover {
+  background-color: #9e4147;
 }
 
 .home-section {
@@ -117,104 +138,247 @@ header {
   padding-left: 20px;
 }
 
-.searchBar input::placeholder{
-    font-size: medium;
+.searchBar input::placeholder {
+  font-size: medium;
 }
 
-.searchBar .searchbtn{
-    position: absolute;
-    left: 300px;
+.searchBar .searchbtn {
+  position: absolute;
+  left: 300px;
 }
 
-.leftSide{
-    padding-top: 30px;
-    flex: 8;
+.leftSide {
+  padding-top: 30px;
+  flex: 8;
 }
 
-.imageContainer{
-    flex: 4;
+.imageContainer {
+  flex: 4;
 }
 
-.imageContainer img{
-    width: 100%;
-    border-radius: 20px;
+.imageContainer img {
+  width: 100%;
+  border-radius: 20px;
 }
 /* ending landing section */
 
 /* trending section */
 
-.trending-section{
-    margin: auto;
-    max-width:1300px;
-    margin-top: 100px ;
+.trending-section {
+  margin: auto;
+  max-width: 1300px;
+  margin-top: 100px;
 }
 
-.trendingHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 40px ;
+.trendingHeader,
+.mostHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
 }
 
-.trendingHeader h1, .mostHeader h1, .categoryHeader h1 {
-    margin-top: 0;
+.trendingHeader h1,
+.mostHeader h1,
+.categoryHeader h1 {
+  margin-top: 0;
 }
 
-.trending-section span, .mostContainer span, .categoryHeader span {
-    text-transform: uppercase;
-    color: #EE626B;
-    font-weight: 600;
+.trending-section span,
+.mostPlayed span,
+.categoryHeader span {
+  text-transform: uppercase;
+  color: #ee626b;
+  font-weight: 600;
 }
 
-.trendingCard, .mostCards, .categoryCards{
-    display: flex;
-    justify-content: space-between;
+.trendingCard,
+.mostCards,
+.categoryCards {
+  display: flex;
+  justify-content: space-between;
 }
 
 .trendingCard .card {
-    position: relative;
+  position: relative;
 }
 
 .trendingCard .card img {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
 .trendingCard .card .cardInfo {
-    position: absolute;
-    top: 200px;
-    width: 100%;
-    background-color: #EEEEEE;
-    border-radius: 0 0 20px 20px;
-    padding-top: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  background-color: #eeeeee;
+  border-radius: 0 0 20px 20px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .trendingCard .card .cardName {
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 .trendingCard .cardName h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .trendingCard .cardName p {
-    color: gray;
-    margin-bottom: 0;
+  color: gray;
+  margin-bottom: 0;
 }
 
 .trendingCard .cardInfo .icon img {
-    width: 50px;
-    transition: .3s;
+  width: 50px;
+  transition: 0.3s;
 }
 
 .trendingCard .cardInfo .icon {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
-.trendingCard .cardInfo img:hover{
-    transform: scale(1.3);
+.trendingCard .cardInfo img:hover {
+  transform: scale(1.3);
 }
 
 /* ending trending section */
+/* start most palyed section */
+.most-section {
+  background-color: #eeeeee;
+  margin-top: 200px;
+  padding: 50px;
+  border-radius: 100px;
+}
+
+.cardImage img {
+  border-radius: 20px;
+}
+
+.mostCards .cardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mostCards .cardInfo .genre {
+  margin-bottom: 0;
+  color: gray;
+}
+
+.most-section {
+  background-color: #eeeeee;
+  margin-top: 200px;
+  padding: 50px;
+  border-radius: 100px;
+}
+
+.most-section .mostPlayed,
+.category {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.category-section {
+  margin-top: 150px;
+}
+
+.category .categoryHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category .categoryCards .cardImage {
+  position: relative;
+  top: -20px;
+}
+
+.category .card .genre {
+  background-color: #0171f9;
+  text-align: center;
+  color: #fff;
+  padding: 15px 0 30px 0;
+  font-size: large;
+  font-weight: 500;
+  border-radius: 20px 20px 0 0;
+}
+
+.category .categoryCards {
+  margin-top: 30px;
+}
+.card {
+  transition: 0.3s;
+}
+
+.category .card:hover {
+  transform: scale(1.05);
+}
+
+/* END CATEGORY GAMES  */
+
+/* FOOTER  */
+footer {
+  background-color: #0171f9;
+  height: 150px;
+  border-radius: 100px 100px 0 0;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  max-width: 1300px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: larger;
+}
+
+/* END FOOTER  */
+
+/* FORM  */
+.formContainer {
+  display: flex;
+  padding: 40px;
+  margin: auto;
+  justify-content: center;
+  max-width: 1300px;
+}
+
+.formContainer form {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 400px;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  height: 450px;
+}
+
+.formContainer form input,
+textarea {
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  font-size: large;
+  /* width: 100%; */
+}
+
+.formContainer input {
+  height: 50px;
+  border-radius: 50px;
+}
+
+.formContainer textarea {
+  border-radius: 20px;
+  padding-top: 10px;
+  resize: none;
+}
+/* END FORM  */
